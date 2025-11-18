@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singtalk – Nivel Fácil</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Nivel Fácil</h1>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="contenido-title">
+      <h2 id="contenido-title">Contenido inicial</h2>
+      <p>Prácticas básicas y vocabulario introductorio para comenzar con la Lengua de Señas.</p>
+      <div class="game-info">
+        <span id="game-timer" class="game-badge" aria-label="Tiempo restante">01:30</span>
+        <span id="game-progress" class="game-badge" aria-label="Progreso de intentos">0/10</span>
+      </div>
+      <div class="controls">
+        <button id="btn-camara" class="btn" aria-label="Activar cámara">Activar cámara</button>
+        <button id="btn-stop" class="btn" aria-label="Detener cámara">Detener cámara</button>
+        <button id="btn-palabra" class="btn" aria-label="Nueva palabra aleatoria">Nueva palabra</button>
+      </div>
+      <div class="cam-frame">
+        <video id="camara" playsinline></video>
+      </div>
+      <div class="word-box" aria-live="polite">
+        <div class="word-label">Palabra</div>
+        <div id="palabra" class="word"></div>
+      </div>
+      <div class="icon-title">Selecciona el icono relacionado</div>
+      <div class="icon-grid">
+        <button class="icon-btn" data-word="casa"><span class="icon-emoji">🏠</span><span>Casa</span></button>
+        <button class="icon-btn" data-word="pelota"><span class="icon-emoji">⚽</span><span>Pelota</span></button>
+        <button class="icon-btn" data-word="vaso"><span class="icon-emoji">🥤</span><span>Vaso</span></button>
+        <button class="icon-btn" data-word="libro"><span class="icon-emoji">📖</span><span>Libro</span></button>
+        <button class="icon-btn" data-word="perro"><span class="icon-emoji">🐶</span><span>Perro</span></button>
+        <button class="icon-btn" data-word="coche"><span class="icon-emoji">🚗</span><span>Coche</span></button>
+      </div>
+      <div class="actions">
+        <a class="btn" href="pagina-principal.html" aria-label="Volver a la página principal">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/animaciones.js"></script>
+</body>
+</html>
