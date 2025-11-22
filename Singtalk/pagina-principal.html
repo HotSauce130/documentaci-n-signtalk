@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singtalk – Inicio</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido/a a Singtalk – Aprende Lengua de Señas</h1>
+    <p class="intro">Explora contenidos interactivos y dinámicos según tu nivel.</p>
+    <div id="auth-actions" class="auth-actions"></div>
+  </header>
+  <main>
+   
+    <section class="card" aria-labelledby="secciones-title">
+      <h2 id="secciones-title">Secciones por nivel</h2>
+      <div class="streak-grid">
+        <div class="streak-card">
+          <div class="day">Fácil</div>
+          <div class="level">Vocabulario básico y elementos cotidianos</div>
+          <div class="score-line"><a class="btn" href="facil.html">Entrar</a></div>
+        </div>
+        <div class="streak-card">
+          <div class="day">Medio</div>
+          <div class="level">Frases comunes y práctica intermedia</div>
+          <div class="score-line"><a class="btn" href="medio.html">Entrar</a></div>
+        </div>
+        <div class="streak-card">
+          <div class="day">Difícil</div>
+          <div class="level">Conceptos avanzados y mayor precisión</div>
+          <div class="score-line"><a class="btn" href="dificil.html">Entrar</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="racha-title">
+      <h2 id="racha-title">Racha de días</h2>
+      <p>Consulta tus puntuaciones diarias por nivel. Este apartado se rellenará con tus resultados.</p>
+      <div class="streak-level">
+        <div class="streak-label">Nivel Fácil</div>
+        <div id="streak-list-facil" class="streak-grid"></div>
+      </div>
+      <div class="streak-level">
+        <div class="streak-label">Nivel Medio</div>
+        <div id="streak-list-medio" class="streak-grid"></div>
+      </div>
+      <div class="streak-level">
+        <div class="streak-label">Nivel Difícil</div>
+        <div id="streak-list-dificil" class="streak-grid"></div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/animaciones.js"></script>
+</body>
+</html>

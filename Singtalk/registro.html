@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singtalk – Registro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Crear cuenta</h1>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="register-title">
+      <h2 id="register-title">Regístrate para guardar tu progreso</h2>
+      <form id="register-form" class="form-grid">
+        <input id="register-name" class="input" type="text" placeholder="Nombre" required>
+        <input id="register-email" class="input" type="email" placeholder="Correo" required>
+        <input id="register-password" class="input" type="password" placeholder="Contraseña" required>
+        <input id="register-password2" class="input" type="password" placeholder="Confirmar contraseña" required>
+        <button class="btn" type="submit">Crear cuenta</button>
+      </form>
+      <div id="register-alert" class="alert" style="display:none"></div>
+      <div class="actions">
+        <a class="btn" href="login.html">Ya tengo cuenta</a>
+        <a class="btn" href="pagina-principal.html">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+:root { color-scheme: light dark; }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.5; background: #f9fafb; color: #111827; }
+header { position: relative; background: #111827; color: #ffffff; padding: 24px 16px; }
+header h1 { margin: 0; font-size: 1.5rem; }
+.intro { font-size: 1rem; margin-top: 8px; color: #e5e7eb; }
+main { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.card { position: relative; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+.card h2 { margin: 0 0 12px; font-size: 1.25rem; color: #111827; }
+.nav-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+a.btn { display: inline-block; padding: 12px 18px; border-radius: 10px; text-decoration: none; background: #2563eb; color: #ffffff; font-weight: 600; letter-spacing: 0.2px; }
+a.btn:hover { background: #1d4ed8; }
+a.btn:focus { outline: 4px solid #93c5fd; outline-offset: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+.streak-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.streak-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+.day { font-weight: 700; }
+.level { color: #374151; margin-top: 4px; }
+.score-line { margin-top: 6px; }
+.session-squares { margin-top: 8px; display: grid; grid-template-columns: repeat(10, 16px); gap: 6px; }
+.square { width: 16px; height: 16px; border-radius: 4px; background: #e5e7eb; }
+.square.ok { background: #10b981; }
+.square.bad { background: #ef4444; }
+.streak-level { margin-top: 12px; }
+.streak-label { font-weight: 700; margin-bottom: 8px; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0 16px; }
+button.btn { border: none; cursor: pointer; }
+.cam-frame { width: 100%; max-width: 720px; margin: 0 auto 16px; border: 2px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; }
+video#camara { width: 100%; height: 100%; object-fit: cover; }
+.word-box { margin-top: 8px; text-align: center; }
+.word-label { color: #6b7280; }
+.word { font-size: 1.5rem; font-weight: 700; }
+.icon-title { margin-top: 16px; font-weight: 700; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 12px; }
+.icon-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 16px; border-radius: 12px; border: 1px solid #e5e7eb; background: #ffffff; cursor: pointer; font-weight: 600; }
+.icon-emoji { font-size: 32px; }
+.icon-btn[disabled] { opacity: 0.5; cursor: not-allowed; }
+
+.flash-overlay { position: fixed; inset: 0; z-index: 1000; pointer-events: none; animation: flashFade 900ms ease-out forwards; }
+.flash-overlay.ok { background: rgba(16,185,129,0.35); }
+.flash-overlay.bad { background: rgba(239,68,68,0.35); }
+@keyframes flashFade { from { opacity: 1; } to { opacity: 0; } }
+.countdown-overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.45); color: #ffffff; font-size: 6rem; font-weight: 800; z-index: 1200; }
+.game-info { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center; }
+.game-badge { background: #111827; color: #ffffff; border-radius: 9999px; padding: 6px 10px; font-weight: 700; font-size: 0.875rem; }
+.form-grid { max-width: 480px; margin: 0 auto; display: grid; gap: 12px; }
+.input { width: 100%; padding: 12px 14px; border: 1px solid #e5e7eb; border-radius: 10px; font-size: 1rem; }
+.alert { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: #fef2f2; color: #7f1d1d; }
+.success { background: #ecfdf5; color: #064e3b; }
+.auth-actions { position: absolute; top: 16px; right: 16px; display: flex; gap: 8px; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #0b0f17; color: #e5e7eb; }
+  .card { background: #0f172a; border-color: #1f2937; box-shadow: none; }
+  .card h2 { color: #e5e7eb; }
+  .streak-card { background: #0f172a; border-color: #1f2937; }
+  .level { color: #9ca3af; }
+  .square { background: #1f2937; }
+  .cam-frame { border-color: #1f2937; }
+  .icon-btn { background: #0f172a; border-color: #1f2937; }
+}
